@@ -22,7 +22,11 @@ export default class Login extends React.Component {
                     value={this.state.Password}
                     secureTextEntry={true}
                 />
-                <Button title={"Show map"} onPress={this.props.showMap}/>
+                <Button title={"Map"} onPress={this.props.showMap}>
+                    <Text style={styles.text}>Show Map</Text>;
+                </Button>
+
+                {/*<Button title={"SignIn"} onPress={this.props.showSignIn}/>*/}
             </View>
         );
     }

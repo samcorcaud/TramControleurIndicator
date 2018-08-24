@@ -2,16 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 
-export default class Map extends React.Component {
+
+export default class SignIn extends React.Component {
 
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>Map</Text>
-                <Button onPress={this.props.showLogin}>
-                    <Text style={styles.text}>Show Login</Text>
-                </Button>
-                {/*<Button title={"SignIn"} onPress={this.props.showSignIn}/>*/}
+                <Text style={styles.text}>Sign in</Text>
+                <Button title={"Show Login"} onPress={this.props.showLogin}/>
+                <Button title={"Show Map"} onPress={this.props.showMap}/>
             </View>
         );
     }
