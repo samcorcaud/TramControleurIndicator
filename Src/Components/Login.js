@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button,TouchableOpacity } from 'react-native';
 
 
 export default class Login extends React.Component {
@@ -22,9 +22,18 @@ export default class Login extends React.Component {
                     value={this.state.Password}
                     secureTextEntry={true}
                 />
-                <Button title={"Show Map"} onPress={this.props.showMap}/>
-
-                <Button title={"Sign In"} onPress={this.props.showSignIn}/>
+                {/*<Button title={"Show Map"} onPress={this.props.showMap}/>
+                <Button title={"Sign In"} onPress={this.props.showSignIn}/>*/}
+                <TouchableOpacity onPress={this.props.showSignIn}>
+                        <View style={styles.button}>
+                            <Text>Sign In</Text>
+                        </View>
+                    </TouchableOpacity>
+                <TouchableOpacity onPress={this.props.showMap}>
+                    <View style={styles.button}>
+                        <Text>Map</Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -40,6 +49,19 @@ const styles = StyleSheet.create({
     },
     text: {
         fontWeight:"bold",
+    },
+    button : {
+        //flex: 1,
+        margin: 5,
+        padding: 5,
+        justifyContent: 'space-between',
+        backgroundColor: '#2196F3',
+        //borderBottomEndRadius : 10,
+        //borderBottomLeftRadius: 10,
+        //borderBottomRightRadius : 10,
+        //borderBottomStartRadius : 10,
+        borderRadius : 10,
+        borderColor : 'black',
     },
 
 });

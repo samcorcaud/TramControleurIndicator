@@ -39,19 +39,19 @@ export default class App extends React.Component {
          if(this.state.currentPage === "Login"){
              return (
                 <View style={styles.container}>
-                    <Login showSignIn={this.showSignIn}/>
+                    <Login showSignIn={this.showSignIn} showMap={this.showMap}/>
                 </View>
             );
          } else if(this.state.currentPage === "Sign In"){
              return (
                  <View style={styles.container}>
-                     <SignIn showLogin={this.showLogin}/>
+                     <SignIn showLogin={this.showLogin} showMap={this.showMap}/>
                  </View>
              );
          } else if(this.state.currentPage === "ShowMap"){
                  return (
                  <View style={styles.container}>
-                     <Map showMap={this.showMap}/>
+                     <Map showLogin={this.showLogin} showSignIn={this.showSignIn}/>
                 </View>
              );
          }

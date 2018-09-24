@@ -1,5 +1,19 @@
 {
   "expo": {
+    "name": "TramControllerIndicator",
+    "version": "0.0.1",
+    "slug": "tram-controller-indicator",
+    "ios": {
+      "bundleIdentifier": "com.sam.TramControllerIndicator"
+    },
+    "android": {
+      "package": "com.sam.TramControllerIndicator",
+      "config": {
+        "googleMaps": { "apiKey": "<AIzaSyATrN8Njid6IlrOkxuPV2zk1RwOXSHugJM>" }
+
+      }
+    },
+
     "sdkVersion": "27.0.0"
   }
 }
