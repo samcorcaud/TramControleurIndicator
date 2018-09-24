@@ -4,6 +4,12 @@ import Login from './Src/Components/Login';
 import Map from "./Src/Components/Map";
 import SignIn from "./Src/Components/SignIn";
 
+import {Firebase} from "./Src/Controller/Firebase";
+
+
+export let firebase = new Firebase();
+console.log(firebase);
+
 
 export default class App extends React.Component {
      constructor(props){
@@ -66,6 +72,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-      width: "100%",
+    width: "100%",
   },
 });

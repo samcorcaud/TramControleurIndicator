@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button,TouchableOpacity } from 'react-native';
+import {firebase} from "../../App";
 
 
 
@@ -32,6 +33,11 @@ export default class SignIn extends React.Component {
                 />
                {/* <Button title={"Login"} onPress={this.props.showLogin}/>
                 <Button title={"Show Map"} onPress={this.props.showMap}/>*/}
+                <TouchableOpacity  onPress={() => firebase.signIn(this.state.Username, this.state.Password, this.state.Mail)}>
+                    <View style={styles.button}>
+                        <Text>Sign In</Text>
+                    </View>
+                </TouchableOpacity>
                 <TouchableOpacity onPress={this.props.showLogin}>
                     <View style={styles.button}>
                         <Text>Log in</Text>
